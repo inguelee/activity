@@ -42,3 +42,51 @@ for i in range(1000):
 numbers = [i for i in range(1000)]
 
 # + 배열을 만들때 for loop을 돌리는 것보다 multiplication으로 할당하는 것이 빠르다!
+
+## 7의 배수 10개 저장하기
+# 수정 전
+arr = []
+for num in range(1, 11):
+    arr.append(num * 7)
+    
+# 수정 후
+arr = [0 for _ in range(10)]
+for num in range(1, 11):
+    arr[num] = num * 7
+
+# [1, 2, 3, 4]를 줄바꿈으로 하나씩 출력하기
+# 1
+# 2
+# 3
+# 4
+
+# 수정 전
+arr = [1, 2, 3, 4]
+for n in arr:
+    print(n)
+    
+# 수정 후
+answer = ""
+for n in arr:
+    answer += str(n) + '\n'
+print(answer)
+
+
+
+
+# 수정 전
+queue = []
+for i in range(N):
+	queue.append(i)
+for i in range(N):
+    print(queue[-1])
+    queue.pop(-1)
+
+# 수정 후
+from collections import deque
+
+queue = deque()
+for i in range(N):
+	queue.append(i)
+for i in range(N):
+	queue.popleft()
