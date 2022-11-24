@@ -69,7 +69,7 @@ for n in arr:
 answer = ""
 for n in arr:
     answer += str(n) + '\n'
-print(answer)
+print(answer) # print(answer[:-1]) 대신 print(answer.rstrip())쓴다!!!
 
 
 
